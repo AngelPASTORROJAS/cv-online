@@ -272,26 +272,5 @@
         </ul>
       </section>
     </main>
-    <button class="bouton" onclick="changeBackground()">Changer le Background</button>
-    <button class="bouton" onclick="resetBackground()">Supprimer le Background</button>
-
-  <script>
-    function changeBackground() {
-      var body = document.querySelector('body');
-      var randomColor = Math.floor(Math.random()*16777215).toString(16);
-      var randomColor2 = Math.floor(Math.random()*16777215).toString(16);
-
-      while (randomColor === randomColor2) {
-        randomColor2 = Math.floor(Math.random()*16777215).toString(16);
-      }
-
-      body.style.background = "linear-gradient(45deg, #"+randomColor+", #"+randomColor2+")";
-    }
-
-    function resetBackground() {
-      var body = document.querySelector('body');
-      body.style.background = "white"
-    }
-  </script>
   </body>
 </html>
