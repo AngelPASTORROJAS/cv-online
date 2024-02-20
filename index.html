@@ -6,9 +6,6 @@
     <title>Angel Daniel PASTOR ROJAS - Portfolio</title>
     <!-- <link rel="stylesheet" href="styles.css" /> -->
     <style>
-      body {
-        transition: background 2s ease;
-      }
       p,li:not(article header ul) li, li>article>footer {
         /* color: #9a0000; */
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -275,20 +272,25 @@
         </ul>
       </section>
     </main>
-    <button onclick="changeBackground()">Change Background</button>
+    <button class="bouton" onclick="changeBackground()">Changer le Background</button>
+    <button class="bouton" onclick="resetBackground()">Supprimer le Background</button>
 
   <script>
     function changeBackground() {
       var body = document.querySelector('body');
-      var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']
-      var randomColor = colors[Math.floor(Math.random() * colors.length)];
-      var randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+      var randomColor = Math.floor(Math.random()*16777215).toString(16);
+      var randomColor2 = Math.floor(Math.random()*16777215).toString(16);
 
       while (randomColor === randomColor2) {
-        randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+        randomColor2 = Math.floor(Math.random()*16777215).toString(16);
       }
 
-      body.style.background = "linear-gradient(45deg,"+randomColor+", "+randomColor2+")";
+      body.style.background = "linear-gradient(45deg, #"+randomColor+", #"+randomColor2+")";
+    }
+
+    function resetBackground() {
+      var body = document.querySelector('body');
+      body.style.background = "white"
     }
   </script>
   </body>
