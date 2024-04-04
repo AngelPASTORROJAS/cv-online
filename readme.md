@@ -1,7 +1,7 @@
 
 # CV en ligne
 
-Ce projet est un rapide aperçu de mon cv, où je montre mes compétences de SEO comme accessibilité.
+Ce projet est un rapide aperçu de mon cv responsive où je montre mes compétences de SEO comme accessibilité.
 
 Aperçu : https://angelpastorrojas.github.io/cv-online/ 
 
